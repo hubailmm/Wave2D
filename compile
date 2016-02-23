@@ -1,0 +1,5 @@
+FILES="ClassicDiscretization2D.cpp SweptDiscretization2D.cpp UpPyramid.cpp DownPyramid.cpp VerticalBridge.cpp HorizontalBridge.cpp Main.cpp"
+
+BIN="wave2d.exe"
+
+mpicxx -O3 $FILES -o $BIN
