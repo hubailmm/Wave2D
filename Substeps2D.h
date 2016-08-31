@@ -31,8 +31,8 @@ public:
 	{
 		const double CFL = 0.3;
 		double laplacian = point->E_input[0] +  point->W_input[0] +  point->N_input[0] +  point->S_input[0] - 4 * point->C_input[0];
-		point->C_input[1] = point->C_input[0];
-		point->C_input[0] = 2 * point->C_input[0] - point->C_input[1] + laplacian * CFL;
+		point->output[1] = point->C_input[0];
+		point->output[0] = 2 * point->C_input[0] - point->C_input[1] + laplacian * CFL;
 	}
 
 	static void conservationCheck(double *previous,double *current)
